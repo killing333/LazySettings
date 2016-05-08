@@ -1,0 +1,6 @@
+framework module Pods_LazySettings_Example {
+  umbrella header "Pods-LazySettings_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

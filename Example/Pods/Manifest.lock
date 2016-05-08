@@ -1,0 +1,14 @@
+PODS:
+  - LazySettings (0.1.0)
+
+DEPENDENCIES:
+  - LazySettings (from `../`)
+
+EXTERNAL SOURCES:
+  LazySettings:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LazySettings: 2998246a5616aca61a88596d270e1c6b6aa5cdb8
+
+COCOAPODS: 0.39.0

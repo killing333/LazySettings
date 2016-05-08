@@ -1,0 +1,6 @@
+framework module Pods_LazySettings_Tests {
+  umbrella header "Pods-LazySettings_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

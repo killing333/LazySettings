@@ -1,0 +1,6 @@
+framework module LazySettings {
+  umbrella header "LazySettings-umbrella.h"
+
+  export *
+  module * { export * }
+}
