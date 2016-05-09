@@ -16,6 +16,7 @@
 		C6F8790B1CDF22300070A651 /* LazySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F879081CDF22300070A651 /* LazySettings.swift */; };
 		C6F8790C1CDF22300070A651 /* LazySettingsGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F879091CDF22300070A651 /* LazySettingsGeneral.swift */; };
 		C6F8790D1CDF22300070A651 /* LazySettingsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8790A1CDF22300070A651 /* LazySettingsModule.swift */; };
+		C6F879151CDF265B0070A651 /* LazySettingsLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F879141CDF265B0070A651 /* LazySettingsLanguage.swift */; };
 		C8E53DD29EBA3A9D60FAA0727002B1CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		D281F354B812A2908A9D227AC24E4558 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		D48B503BA0A896122BDC4EFC3A31F814 /* LazySettings-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00D86E2881F293D23CDD6E53EBAA10 /* LazySettings-dummy.m */; };
@@ -70,6 +71,7 @@
 		C6F879081CDF22300070A651 /* LazySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazySettings.swift; sourceTree = "<group>"; };
 		C6F879091CDF22300070A651 /* LazySettingsGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazySettingsGeneral.swift; sourceTree = "<group>"; };
 		C6F8790A1CDF22300070A651 /* LazySettingsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazySettingsModule.swift; sourceTree = "<group>"; };
+		C6F879141CDF265B0070A651 /* LazySettingsLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazySettingsLanguage.swift; sourceTree = "<group>"; };
 		F54683412AA5A86E675F557D6199FACB /* Pods-LazySettings_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LazySettings_Example-umbrella.h"; sourceTree = "<group>"; };
 		F5FF33D27A75F935E50BE77B21B88458 /* Pods_LazySettings_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazySettings_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8BB9FEB88186702ECAFE8466B551AB /* Pods-LazySettings_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LazySettings_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -135,8 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				C6F879081CDF22300070A651 /* LazySettings.swift */,
-				C6F879091CDF22300070A651 /* LazySettingsGeneral.swift */,
 				C6F8790A1CDF22300070A651 /* LazySettingsModule.swift */,
+				C6F879091CDF22300070A651 /* LazySettingsGeneral.swift */,
+				C6F879141CDF265B0070A651 /* LazySettingsLanguage.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F8790D1CDF22300070A651 /* LazySettingsModule.swift in Sources */,
+				C6F879151CDF265B0070A651 /* LazySettingsLanguage.swift in Sources */,
 				D48B503BA0A896122BDC4EFC3A31F814 /* LazySettings-dummy.m in Sources */,
 				C6F8790B1CDF22300070A651 /* LazySettings.swift in Sources */,
 				C6F8790C1CDF22300070A651 /* LazySettingsGeneral.swift in Sources */,

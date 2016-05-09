@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LazySettings
+
+  Created by Ho Lun Wan on 9/5/2016.
+  Copyright © 2016 CocoaPods. All rights reserved.
+*/
+"test-string" = "測試";
+"test-string-language" = "繁體中文";

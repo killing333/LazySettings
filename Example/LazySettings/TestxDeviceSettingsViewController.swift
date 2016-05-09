@@ -36,8 +36,12 @@ class TestLazySettingsViewController: UITableViewController {
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		let module: LazySettingsModule = LazySettings.sharedSettings.modules[indexPath.row]
 
-		if module.dynamicType.identifier() == LazySettingsGeneral.identifier() {
+		switch module.dynamicType.identifier() {
+		case LazySettingsGeneral.identifier():
 			self.performSegueWithIdentifier("showGeneral", sender: nil)
+		case LazySettingsLanguage.identifier():
+			self.performSegueWithIdentifier("showLanguage", sender: nil)
+		default: ()
 		}
 	}
 }

@@ -17,6 +17,8 @@
 		C6F8790F1CDF22530070A651 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F8790E1CDF22530070A651 /* Main.storyboard */; };
 		C6F879121CDF22820070A651 /* TestxDeviceSettingsGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F879101CDF22820070A651 /* TestxDeviceSettingsGeneralViewController.swift */; };
 		C6F879131CDF22820070A651 /* TestxDeviceSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F879111CDF22820070A651 /* TestxDeviceSettingsViewController.swift */; };
+		C6F879181CE0C6180070A651 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6F8791A1CE0C6180070A651 /* Localizable.strings */; };
+		C6F8791E1CE0CAFC0070A651 /* TestLazySettingsLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8791D1CE0CAFC0070A651 /* TestLazySettingsLanguageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		C6F8790E1CDF22530070A651 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C6F879101CDF22820070A651 /* TestxDeviceSettingsGeneralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestxDeviceSettingsGeneralViewController.swift; sourceTree = "<group>"; };
 		C6F879111CDF22820070A651 /* TestxDeviceSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestxDeviceSettingsViewController.swift; sourceTree = "<group>"; };
+		C6F879191CE0C6180070A651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C6F8791B1CE0C6330070A651 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C6F8791C1CE0C6410070A651 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C6F8791D1CE0CAFC0070A651 /* TestLazySettingsLanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLazySettingsLanguageViewController.swift; sourceTree = "<group>"; };
 		D2B358A9FAFBA4B9F28D9557 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D471348160183E37B18413D0 /* Pods-LazySettings_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazySettings_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazySettings_Example/Pods-LazySettings_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E72CDC5F2CC6B16647B1A21C /* Pods-LazySettings_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazySettings_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazySettings_Tests/Pods-LazySettings_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				C6F879101CDF22820070A651 /* TestxDeviceSettingsGeneralViewController.swift */,
 				C6F879111CDF22820070A651 /* TestxDeviceSettingsViewController.swift */,
+				C6F8791D1CE0CAFC0070A651 /* TestLazySettingsLanguageViewController.swift */,
 				C6F8790E1CDF22530070A651 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -125,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				C6F8791A1CE0C6180070A651 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
@@ -253,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F8790F1CDF22530070A651 /* Main.storyboard in Resources */,
+				C6F879181CE0C6180070A651 /* Localizable.strings in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -365,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F8791E1CE0CAFC0070A651 /* TestLazySettingsLanguageViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				C6F879131CDF22820070A651 /* TestxDeviceSettingsViewController.swift in Sources */,
@@ -397,6 +408,16 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		C6F8791A1CE0C6180070A651 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6F879191CE0C6180070A651 /* Base */,
+				C6F8791B1CE0C6330070A651 /* zh-Hant */,
+				C6F8791C1CE0C6410070A651 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -489,6 +510,7 @@
 			baseConfigurationReference = D471348160183E37B18413D0 /* Pods-LazySettings_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LazySettings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -502,6 +524,7 @@
 			baseConfigurationReference = 415D16C35F5909769544B551 /* Pods-LazySettings_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LazySettings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Add custom module
 		LazySettings.sharedSettings.addModule(LazySettingsGeneral())
+		LazySettings.sharedSettings.addModule(LazySettingsLanguage())
 		LazySettings.sharedSettings.loadFromDisk()
 		
         return true
