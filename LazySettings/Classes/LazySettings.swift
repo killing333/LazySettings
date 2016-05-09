@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum LazySettingsEnvironment {
+@objc public enum LazySettingsEnvironment: Int {
 	case Development
 	case UAT
 	case Production

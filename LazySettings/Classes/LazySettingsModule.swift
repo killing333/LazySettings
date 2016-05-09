@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol LazySettingsModule {
+@objc public protocol LazySettingsModule {
 	
 	/**
 	Unique ID for the module
