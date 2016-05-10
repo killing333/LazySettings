@@ -12,8 +12,8 @@ import UIKit
 public class LazySettingsGeneral: NSObject, LazySettingsModule {
 	
 	// Constant
-	private let LazySettingsGeneralKeyLaunchCount: String			= "launchCount"
-	private let LazySettingsGeneralKeyVersion: String				= "version"
+	private let LazySettingsGeneralKeyLaunchCount				= "launchCount"
+	private let LazySettingsGeneralKeyVersion					= "version"
 
 	// Var
 	public var launchCount: Int = 0
@@ -27,7 +27,7 @@ public class LazySettingsGeneral: NSObject, LazySettingsModule {
 		
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LazySettingsGeneral.applicationWillEnterForegroundNotification(_:)), name: UIApplicationWillEnterForegroundNotification, object: nil)
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LazySettingsGeneral.applicationWillResignActiveNotification(_:)), name: UIApplicationWillResignActiveNotification, object: nil)
-		self.reset()
+		reset()
 	}
 	
 	// LazySettingsModule

@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import LazySettings
 
 class TestLazySettingsLanguageViewController: UITableViewController {
-
+	@IBOutlet var languageLabel: UILabel!
+	
+	// Var
+	var localizations: [String]!
+	var languageSettings: LazySettingsLanguage?
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
 		print(NSBundle.mainBundle().localizations)
 		print(NSBundle.mainBundle().preferredLocalizations)
+		languageSettings = LazySettings.sharedSettings.moduleForIdentifier(LazySettingsLanguage.identifier()) as? LazySettingsLanguage
+		reload()
 	}
 	
     override func viewDidLoad() {
@@ -26,34 +34,61 @@ class TestLazySettingsLanguageViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		reloadText()
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+	
+	
+	// MARK: Helper
+	func reload() -> Bool {
+		localizations = NSBundle.mainBundle().localizations
+		return true
+	}
+	func reloadText() -> Bool {
+		languageLabel.text = languageSettings?.localizedStringForKey("test-string-language", value: "test-string-language", table: nil)
+		navigationItem.title = LLocStr("test-string")
+		return true
+	}
+	
+	
+	
     // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
 
-    /*
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return localizations.count
+    }
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
 
         // Configure the cell...
+		cell.textLabel?.text = localizations[indexPath.row]
+		cell.detailTextLabel?.text = nil
+		cell.accessoryType = ( languageSettings?.currentLanguage == localizations[indexPath.row] ? .Checkmark : .None )
 
         return cell
     }
-    */
 
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		languageSettings?.currentLanguage = localizations[indexPath.row]
+		tableView.reloadSections(NSIndexSet.init(index: 0), withRowAnimation: .Automatic)
+		reloadText()
+	}
+	
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
