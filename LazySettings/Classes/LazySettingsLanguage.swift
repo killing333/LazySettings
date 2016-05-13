@@ -9,7 +9,7 @@
 import UIKit
 
 
-public func LLocStr(_ key: String) -> String {
+public func LLocStr(key: String) -> String {
 	if let languageSettings = LazySettings.sharedSettings.moduleForIdentifier(LazySettingsLanguage.identifier()) as? LazySettingsLanguage {
 		return languageSettings.localizedStringForKey(key, value: key, table: nil)
 	} else {
@@ -28,10 +28,9 @@ public class LazySettingsLanguage: NSObject, LazySettingsModule {
 	nil means use device's default
 	*/
 	public var currentLanguage: String? {
-		willSet {
-			if let language = newValue where NSBundle.mainBundle().localizations.contains(language),
+		didSet {
+			if let language = currentLanguage where NSBundle.mainBundle().localizations.contains(language),
 			   let path = NSBundle.mainBundle().pathForResource(language, ofType: "lproj") {
-				currentLanguage = newValue
 				currentLocalizationBundle = NSBundle(path: path)
 			} else {
 				currentLanguage = nil
@@ -50,7 +49,7 @@ public class LazySettingsLanguage: NSObject, LazySettingsModule {
 	
 	
 	// Functions
-	public func localizedStringForKey(_ key: String, value value: String?, table tableName: String?) -> String {
+	public func localizedStringForKey(key: String, value: String?, table tableName: String?) -> String {
 		if let locStr = currentLocalizationBundle?.localizedStringForKey(key, value: value, table: tableName) {
 			return locStr
 		} else {
