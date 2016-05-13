@@ -8,26 +8,36 @@
 
 import Foundation
 
+/**
+	Environment constant
+*/
 @objc public enum LazySettingsEnvironment: Int {
-	case Development
-	case UAT
-	case Production
+	case Development		= 0
+	case UAT				= 1
+	case Production			= 2
 }
+
+/**
+	Posted when environment changed
+*/
+public let LazySettingsEnvironmentDidChangedNotification				= "environmentDidChanged"
+
 public class LazySettings: NSObject {
 	
 	// Constant
-	private let LazySettingsKeyInfoDict: String			= "LazySettings"
+	private let LazySettingsKeyInfoDict: String							= "LazySettings"
 	
 	// Static
-	public static let sharedSettings = LazySettings()
+	public static let sharedSettings									= LazySettings()
+	public static let environmentDidChangedNotificationName				= LazySettingsEnvironmentDidChangedNotification
 
 	// Var
 	/**
-	Modules added
+		Modules added
 	*/
 	public var modules: [LazySettingsModule] = []
 	/**
-	Running environment
+		Running environment
 	*/
 	public var environment: LazySettingsEnvironment = .Development {
 		didSet {
@@ -35,14 +45,16 @@ public class LazySettings: NSObject {
 			for module: LazySettingsModule in modules {
 				module.environmentChanged(environment)
 			}
+			
+			NSNotificationCenter.defaultCenter().postNotificationName(LazySettingsEnvironmentDidChangedNotification, object: nil)
 		}
 	}
 	/**
-	Dictionary containing all the settings of the modules
+		Dictionary containing all the settings of the modules
 	*/
 	private var info: [String : AnyObject]?
 	/**
-	Module name -> Module
+		Module name -> Module
 	*/
 	private var modulesHash: [String : LazySettingsModule] = [:]
 
