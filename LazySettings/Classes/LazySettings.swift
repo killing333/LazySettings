@@ -2,7 +2,7 @@
 //  LazySettings.swift
 //  Pods
 //
-//  Created by Ho Lun Wan on 4/5/2016.
+//  Created by killing333 on 4/5/2016.
 //
 //
 
@@ -22,6 +22,9 @@ import Foundation
 */
 public let LazySettingsEnvironmentDidChangedNotification				= "environmentDidChanged"
 
+/**
+	An organized way to save app settings to NSUserDefaults.
+*/
 public class LazySettings: NSObject {
 	
 	// Constant
@@ -66,6 +69,9 @@ public class LazySettings: NSObject {
 	
 	
 	// MARK: Getter
+	/**
+		Module of certain identifier
+	*/
 	public func moduleForIdentifier(ID: String) -> LazySettingsModule? {
 		return modulesHash[ID]
 	}
@@ -73,7 +79,7 @@ public class LazySettings: NSObject {
 	
 	// MARK: Helper
 	/**
-	Load from NSUserDefaults
+		Load from NSUserDefaults
 	*/
 	public func loadFromDisk() -> Bool {
 		let userDefaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -90,7 +96,7 @@ public class LazySettings: NSObject {
 	}
 	
 	/**
-	Save to NSUserDefaults
+		Save to NSUserDefaults
 	*/
 	public func saveToDisk() -> Bool {
 		let userDefaults :NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -106,7 +112,7 @@ public class LazySettings: NSObject {
 	}
 	
 	/**
-	Add module only if module of same identifier has not been added
+		Add module only if module of same identifier has not been added
 	*/
 	public func addModule(module: LazySettingsModule) -> Bool {
 		
@@ -119,6 +125,9 @@ public class LazySettings: NSObject {
 		}
 	}
 	
+	/**
+		Reset all the settings to defaults
+	*/
 	public func reset() -> Bool {
 		
 		// Reset all the module

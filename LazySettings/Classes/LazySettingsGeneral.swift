@@ -2,7 +2,7 @@
 //  LazySettingsGeneral.swift
 //  Pods
 //
-//  Created by Ho Lun Wan on 4/5/2016.
+//  Created by killing333 on 4/5/2016.
 //
 //
 

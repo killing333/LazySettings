@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "LazySettings"
   s.version          = "0.1.0"
-  s.summary          = "A short description of LazySettings."
+  s.summary          = "An organized way to save app settings to `NSUserDefaults`."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,20 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  When `NSUserDefaults` is widely used in your source files, it would be hard to trace where your settings load and save. Thus an organized way has come up.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/LazySettings"
+  s.homepage         = "https://github.com/killing333/LazySettings"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "killing333" => "hlwanhoj@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/LazySettings.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/killing333/LazySettings.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'LazySettings/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'LazySettings' => ['LazySettings/Assets/*.png']
   # }
