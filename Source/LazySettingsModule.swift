@@ -13,7 +13,7 @@ import Foundation
 	/**
 	Unique ID for the module
 	*/
-	var ID: String { get }
+	var moduleID: String { get }
 	
 	/**
 	Load from dictionary. Setup should be done here

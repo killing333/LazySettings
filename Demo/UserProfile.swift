@@ -16,7 +16,7 @@ class UserProfile: LazySettingsModule {
 	
 	
 	// MARK: - LazySettingsModule
-	var ID: String {
+	var moduleID: String {
 		return "UserProfile"
 	}
 
