@@ -67,7 +67,7 @@ open class LazySettings: NSObject {
 		
 		// Load all the module
 		for module: LazySettingsModule in modules {
-			module.load(info[module.ID] as? [String : Any])
+			module.load(info[module.moduleID] as? [String : Any])
 		}
 	}
 	
@@ -79,7 +79,7 @@ open class LazySettings: NSObject {
 		
 		// Save all the module
 		for module: LazySettingsModule in modules {
-			info[module.ID] = module.save()
+			info[module.moduleID] = module.save()
 		}
 		
 		userDefaults.set(info, forKey: keyInfoDict)
@@ -91,7 +91,7 @@ open class LazySettings: NSObject {
 		Add module only if module of same identifier has not been added
 	*/
 	@discardableResult open func add(module: LazySettingsModule) -> Bool {
-		if modules.contains(where: { $0.ID == module.ID }) {
+		if modules.contains(where: { $0.moduleID == module.moduleID }) {
 			return false
 		}
 		
@@ -100,7 +100,7 @@ open class LazySettings: NSObject {
 	}
 	
 	open func remove(module: LazySettingsModule) -> Bool {
-		guard let idx = modules.index(where: { $0.ID == module.ID }) else {
+		guard let idx = modules.index(where: { $0.moduleID == module.moduleID }) else {
 			return false
 		}
 		
